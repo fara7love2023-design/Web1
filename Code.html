@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Jordan Tourism</title>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Jordan Tourism</h1>
+    <nav>
+      <a onclick="showSection('home')">Home</a>
+      <a onclick="showSection('petra')">Petra</a>   
+        
+      <a onclick="showSection('wadi_rum')">Wadi Rum</a>
+      <a onclick="showSection('dead_sea')">Dead Sea</a>
+      <a onclick="showSection('jerash')">Jerash</a>
+      <a onclick="showSection('contact')">Contact</a>
+    </nav>
+  </header             >
+
+
+    
+  <section id="home" class="active">
+    <h2>Discover Jordan</h2>
+    <p>Jordan is a country with beautiful landscapes and rich history. Check some of the main tourist destinations:</p>
+    <ul>
+      <li><a onclick="showSection('petra')">Petra</a></li>
+      <li><a onclick="showSection('wadi_rum')">Wadi Rum</a></li>
+      <li><a onclick="showSection('dead_sea')">Dead Sea</a></li>
+      <li><a onclick="showSection('jerash')">Jerash</a></li>
+    </ul>
+    <table>
+      <tr>
+        <th>Destination</th>
+        <th>Best Season</th>
+        <th>Entry Fee</th>
+      </tr>
+      <tr>
+        <td>Petra</td>
+        <td>Spring & Autumn</td>
+        <td>$70</td>
+      </tr>
+      <tr>
+        <td>Wadi Rum</td>
+        <td>Winter & Spring</td>
+        <td>$50</td>
+      </tr>
+      <tr>
+        <td>Dead Sea</td>
+        <td>All Year</td>
+        <td>$20</td>
+      </tr>
+      <tr>
+        <td>Jerash</td>
+        <td>Spring & Autumn</td>
+        <td>$12</td>
+      </tr>
+    </table>
+  </section>
+
+  
+  <section id="petra">
+    <h2>Petra</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Petra_Jordan_BW_21.JPG" alt="Petra">
+    <p>Petra is Jordan's most famous archaeological site, also called the Rose City. UNESCO listed it as a World Heritage Site.</p>
+    <h3>Facts:</h3>
+    <ul>
+      <li>Located in southern Jordan</li>
+      <li>Best visiting season: Spring and Autumn</li>
+      <li>Entrance fee: $70</li>
+    </ul>
+    <table>
+      <tr>
+        <th>Feature</th>
+        <th>Detail</th>
+      </tr>
+      <tr>
+        <td>Main Attraction</td>
+        <td>The Treasury</td>
+      </tr>
+      <tr>
+        <td>Built</td>
+        <td>5th century BC</td>
+      </tr>
+      <tr>
+        <td>Visitors per year</td>
+        <td>More than 1 million</td>
+      </tr>
+    </table>
+  </section>
+
+  
+  <section id="wadi_rum">
+    <h2>Wadi Rum</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Wadi_Rum_sunset.jpg" alt="Wadi Rum">
+    <p>Wadi Rum is known as the Valley of the Moon, a protected desert area with giant sandstone mountains.</p>
+    <h3>Activities:</h3>
+    <ol>
+      <li>Jeep Tours</li>
+      <li>Star Camping</li>
+      <li>Hiking & Rock Climbing</li>
+      <li>Hot Air Balloon Rides</li>
+    </ol>
+  </section>
+
+  
+  <section id="dead_sea">
+    <h2>Dead Sea</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dead_Sea_Aerial_View.jpg" alt="Dead Sea">
+    <p>The Dead Sea is the lowest point on Earth, famous for its salt and mineral mud.</p>
+    <ul>
+      <li>Float easily due to high salt content</li>
+      <li>Health resorts and spa</li>
+      <li>Open year-round</li>
+    </ul>
+  </section>
+
+  
+  <section id="jerash">
+    <h2>Jerash</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Jerash_Forum.JPG" alt="Jerash">
+    <p>Jerash is famous for its well-preserved Roman ruins including theaters, temples, and streets with columns.</p>
+    <h3>Highlights:</h3>
+    <ol>
+      <li>Oval Forum</li>
+      <li>Hadrian's Arch</li>
+      <li>Hippodrome</li>
+      <li>South Theater</li>
+    </ol>
+  </section>
+
+  
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="fname">Full Name:</label>
+      <input type="text" id="fname" name="fname" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="destination">Select Destination:</label>
+      <select id="destination" name="destination">
+        <option value="petra">Petra</option>
+        <option value="wadi_rum">Wadi Rum</option>
+        <option value="dead_sea">Dead Sea</option>
+        <option value="jerash">Jerash</option>
+      </select>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+
+      <input type="submit" value="Send Message">
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jordan Tourism. All rights reserved.</p>
+  </footer> 
+  <script>
+
+    function showSection(id) {
+      var sections = document.querySelectorAll('section');
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].classList.remove('active');
+      }
+      document.getElementById(id).classList.add('active');
+      window.scrollTo(0,0);
+    }
+  </script>
+</body>
+  </html>
